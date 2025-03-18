@@ -110,11 +110,14 @@
             color: #ff00ff;
             border-radius: 0;
             cursor: pointer;
-            font-family: "Courier New", monospace;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            font-family: "Comic Sans MS", cursive;
             position: relative;
             overflow: hidden;
+            width: auto;
+            max-width: 90%;
+            white-space: normal;
+            word-wrap: break-word;
+            margin: 10px auto;
         }
 
         .sparkle-button:hover {
@@ -214,6 +217,58 @@
             margin: 0 10px;
             font-size: 0.8em;
         }
+
+        /* Mobile Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            .sparkle-button {
+                padding: 12px 20px;
+                font-size: 1em;
+                letter-spacing: 1px;
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .question {
+                font-size: 1.5em;
+            }
+
+            .date {
+                font-size: 1.2em;
+            }
+
+            .answer {
+                font-size: 2.5em;
+            }
+
+            .divider {
+                font-size: 1em;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media screen and (max-width: 480px) {
+            .sparkle-button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .question {
+                font-size: 1.3em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -224,7 +279,7 @@
         <h1>✧･ﾟJury Duty Status･ﾟ✧</h1>
         <div class="date" id="current-date"></div>
         <div class="question">⋆˚✧₊⁎ Does Karin have jury duty today? ⁎⁺˳✧༚</div>
-        <button class="sparkle-button" onclick="revealAnswer()">xX_Click_to_Find_Out_Xx</button>
+        <button class="sparkle-button" onclick="revealAnswer()">Click to Find Out! 🌟</button>
         <div class="answer" id="answer">No</div>
         <div class="divider">⋆｡°✩.•´¯`•.♥.•´¯`•.✩°｡⋆</div>
     </div>
